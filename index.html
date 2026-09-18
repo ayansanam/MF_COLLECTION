@@ -6,14 +6,15 @@
 
 <title>MF COLLECTION | Premium Fashion, Jewellery & Accessories</title>
 
-<meta name="description" content="MF COLLECTION - Premium fashion, jewellery, Air Bud cover machines and accessories. Order easily through WhatsApp.">
+<meta name="description" content="MF COLLECTION - Premium products, jewellery and accessories. Order easily through WhatsApp.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -21,28 +22,35 @@ html{
 }
 
 body{
-    background:#0b0b0b;
+    background:
+    radial-gradient(circle at 15% 10%,rgba(212,175,55,.10),transparent 25%),
+    radial-gradient(circle at 85% 35%,rgba(212,175,55,.08),transparent 25%),
+    #050505;
     color:white;
 }
 
 /* HEADER */
+
 header{
-    background:linear-gradient(90deg,#090909,#1b1407,#090909);
-    padding:20px 7%;
+    background:rgba(5,5,5,.94);
+    backdrop-filter:blur(15px);
+    padding:18px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
-    border-bottom:1px solid #c9a227;
+    border-bottom:1px solid rgba(212,175,55,.45);
+    box-shadow:0 5px 30px rgba(0,0,0,.6);
 }
 
 .logo{
-    font-size:30px;
-    font-weight:bold;
+    font-size:29px;
+    font-weight:800;
     color:#d4af37;
-    letter-spacing:2px;
+    letter-spacing:3px;
+    text-shadow:0 0 18px rgba(212,175,55,.35);
 }
 
 nav{
@@ -52,9 +60,11 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#eee;
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
 nav a:hover{
@@ -62,246 +72,335 @@ nav a:hover{
 }
 
 .cart{
-    background:#d4af37;
+    background:linear-gradient(135deg,#d4af37,#f5d76e);
     color:#000 !important;
-    padding:10px 16px;
-    border-radius:25px;
-    font-weight:bold;
+    padding:11px 18px;
+    border-radius:30px;
+    box-shadow:0 5px 18px rgba(212,175,55,.25);
 }
 
 /* HERO */
+
 .hero{
-    min-height:530px;
+    min-height:650px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:50px 20px;
+    padding:70px 20px;
+    position:relative;
+    overflow:hidden;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
-    radial-gradient(circle at center,#5c4814,#080808 65%);
+    linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.86)),
+    radial-gradient(circle at center,
+    rgba(212,175,55,.28),
+    rgba(70,50,10,.15) 35%,
+    #030303 75%);
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(212,175,55,.08);
+    filter:blur(80px);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
-    font-size:65px;
+    font-size:72px;
     color:#d4af37;
-    letter-spacing:5px;
+    letter-spacing:7px;
+    text-shadow:
+    0 0 10px rgba(212,175,55,.4),
+    0 0 35px rgba(212,175,55,.2);
 }
 
 .hero p{
     font-size:20px;
-    margin:20px 0 30px;
+    margin:22px 0 35px;
     color:#ddd;
 }
 
 .shop-btn{
     display:inline-block;
-    background:#d4af37;
-    color:#000;
-    padding:14px 30px;
-    border-radius:30px;
+    background:linear-gradient(135deg,#d4af37,#f4d66d);
+    color:#050505;
+    padding:15px 35px;
+    border-radius:35px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(212,175,55,.3);
+    transition:.3s;
 }
 
 .shop-btn:hover{
-    background:#f0cf55;
+    transform:translateY(-3px) scale(1.03);
 }
 
 /* SECTIONS */
+
 section{
-    padding:75px 7%;
+    padding:90px 7%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:50px;
 }
 
 .section-title h2{
     color:#d4af37;
-    font-size:38px;
+    font-size:40px;
+    text-shadow:0 0 15px rgba(212,175,55,.18);
 }
 
 .section-title p{
-    color:#aaa;
-    margin-top:10px;
+    color:#999;
+    margin-top:12px;
+    font-size:15px;
 }
 
 /* PRODUCTS */
+
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:28px;
 }
 
 .product{
-    background:linear-gradient(145deg,#171717,#0e0e0e);
-    border:1px solid #292929;
-    border-radius:18px;
+    background:
+    linear-gradient(145deg,
+    rgba(255,255,255,.055),
+    rgba(255,255,255,.015));
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
     overflow:hidden;
-    transition:.3s;
+    transition:.35s;
+    position:relative;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.04);
 }
 
 .product:hover{
-    transform:translateY(-8px);
-    border-color:#d4af37;
-    box-shadow:0 10px 30px rgba(212,175,55,.15);
+    transform:translateY(-10px);
+    border-color:rgba(212,175,55,.7);
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.55),
+    0 0 25px rgba(212,175,55,.12);
 }
 
 .product img{
     width:100%;
-    height:280px;
+    height:290px;
     object-fit:cover;
     display:block;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.04);
 }
 
 .info{
-    padding:20px;
+    padding:22px;
 }
 
 .info h3{
     font-size:19px;
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
 .info p{
     color:#999;
     font-size:14px;
-    margin-bottom:15px;
+    margin-bottom:17px;
 }
 
 .price{
     color:#d4af37;
-    font-size:21px;
-    font-weight:bold;
-    margin-bottom:15px;
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:17px;
 }
 
 .add{
     width:100%;
-    padding:12px;
+    padding:13px;
     border:none;
-    border-radius:8px;
-    background:#d4af37;
-    color:#000;
-    font-weight:bold;
+    border-radius:10px;
+    background:linear-gradient(135deg,#d4af37,#f4d66d);
+    color:#050505;
+    font-weight:800;
     cursor:pointer;
+    transition:.3s;
 }
 
 .add:hover{
-    background:#f0cf55;
+    transform:translateY(-2px);
+    box-shadow:0 7px 20px rgba(212,175,55,.3);
+}
+
+/* TRUST */
+
+.trust-section{
+    background:
+    radial-gradient(circle at center,
+    rgba(212,175,55,.07),
+    transparent 60%);
+}
+
+.trust{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:22px;
+    text-align:center;
+}
+
+.trust-box{
+    background:
+    linear-gradient(145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.015));
+
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:18px;
+    padding:30px 22px;
+    transition:.3s;
+}
+
+.trust-box:hover{
+    transform:translateY(-6px);
+    border-color:rgba(212,175,55,.5);
+}
+
+.trust-box h3{
+    color:#d4af37;
+    margin-bottom:12px;
+}
+
+.trust-box p{
+    color:#999;
+    line-height:1.5;
 }
 
 /* REVIEWS */
+
 .reviews-section{
-    background:#101010;
+    background:
+    radial-gradient(circle at center,
+    rgba(212,175,55,.08),
+    transparent 60%);
 }
 
 .review-form{
     max-width:600px;
-    margin:0 auto 45px;
-    background:#171717;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #292929;
+    margin:0 auto 50px;
+
+    background:
+    linear-gradient(145deg,
+    rgba(255,255,255,.055),
+    rgba(255,255,255,.015));
+
+    padding:28px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .review-form input,
 .review-form textarea,
 .review-form select{
     width:100%;
-    padding:13px;
-    margin-bottom:15px;
-    background:#0b0b0b;
+    padding:14px;
+    margin-bottom:16px;
+    background:#090909;
     color:white;
-    border:1px solid #444;
-    border-radius:8px;
+    border:1px solid #333;
+    border-radius:10px;
     outline:none;
 }
 
+.review-form input:focus,
+.review-form textarea:focus,
+.review-form select:focus{
+    border-color:#d4af37;
+}
+
 .review-form textarea{
-    height:100px;
+    height:110px;
     resize:none;
 }
 
 .review-form button{
     width:100%;
-    padding:13px;
+    padding:14px;
     border:none;
-    border-radius:8px;
-    background:#d4af37;
-    color:#000;
-    font-weight:bold;
+    border-radius:10px;
+    background:linear-gradient(135deg,#d4af37,#f4d66d);
+    color:#050505;
+    font-weight:800;
     cursor:pointer;
 }
 
 .review-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
 }
 
 .review{
-    background:#171717;
-    border:1px solid #292929;
-    padding:20px;
-    border-radius:15px;
+    background:
+    linear-gradient(145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.015));
+
+    border:1px solid rgba(255,255,255,.08);
+    padding:23px;
+    border-radius:18px;
 }
 
 .review h3{
     color:#d4af37;
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
 .stars{
     color:#d4af37;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .review p{
     color:#ccc;
-    line-height:1.5;
-}
-
-/* TRUST */
-.trust{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    text-align:center;
-}
-
-.trust-box{
-    background:#151515;
-    border:1px solid #292929;
-    border-radius:15px;
-    padding:25px;
-}
-
-.trust-box h3{
-    color:#d4af37;
-    margin-bottom:10px;
-}
-
-.trust-box p{
-    color:#aaa;
+    line-height:1.6;
 }
 
 /* CART */
+
 .cart-box{
     position:fixed;
-    right:-400px;
+    right:-420px;
     top:0;
-    width:350px;
+    width:370px;
     height:100%;
-    background:#111;
+    background:
+    linear-gradient(145deg,#141414,#080808);
     z-index:2000;
-    padding:25px;
+    padding:28px;
     transition:.4s;
-    box-shadow:-5px 0 25px rgba(0,0,0,.7);
+    box-shadow:-15px 0 45px rgba(0,0,0,.7);
     overflow-y:auto;
+    border-left:1px solid rgba(212,175,55,.35);
 }
 
 .cart-box.open{
@@ -310,22 +409,27 @@ section{
 
 .cart-box h2{
     color:#d4af37;
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .close{
     float:right;
     cursor:pointer;
     font-size:25px;
+    color:#aaa;
+}
+
+.close:hover{
+    color:#d4af37;
 }
 
 .cart-item{
-    border-bottom:1px solid #333;
-    padding:15px 0;
+    border-bottom:1px solid #292929;
+    padding:16px 0;
 }
 
 .cart-item h4{
-    margin-bottom:7px;
+    margin-bottom:8px;
 }
 
 .remove{
@@ -335,10 +439,10 @@ section{
 }
 
 .total{
-    font-size:22px;
+    font-size:23px;
     color:#d4af37;
-    margin:25px 0;
-    font-weight:bold;
+    margin:28px 0;
+    font-weight:800;
 }
 
 .whatsapp{
@@ -346,35 +450,39 @@ section{
     text-align:center;
     background:#25D366;
     color:white;
-    padding:14px;
-    border-radius:10px;
+    padding:15px;
+    border-radius:11px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:800;
+    box-shadow:0 8px 20px rgba(37,211,102,.18);
 }
 
 /* FOOTER */
+
 footer{
     text-align:center;
-    padding:40px 20px;
-    background:#050505;
-    border-top:1px solid #292929;
+    padding:50px 20px;
+    background:#030303;
+    border-top:1px solid rgba(212,175,55,.25);
 }
 
 footer h2{
     color:#d4af37;
-    margin-bottom:10px;
+    margin-bottom:12px;
+    letter-spacing:2px;
 }
 
 footer p{
-    color:#999;
+    color:#777;
     margin:7px 0;
 }
 
 /* MOBILE */
+
 @media(max-width:700px){
 
     header{
-        padding:17px 5%;
+        padding:16px 5%;
         flex-direction:column;
         gap:15px;
     }
@@ -384,21 +492,22 @@ footer p{
     }
 
     nav{
-        gap:12px;
+        gap:10px;
         flex-wrap:wrap;
         justify-content:center;
     }
 
     nav a{
-        font-size:12px;
+        font-size:11px;
     }
 
     .hero{
-        min-height:450px;
+        min-height:500px;
     }
 
     .hero h1{
         font-size:40px;
+        letter-spacing:4px;
     }
 
     .hero p{
@@ -406,487 +515,624 @@ footer p{
     }
 
     section{
-        padding:55px 5%;
+        padding:65px 5%;
     }
 
     .section-title h2{
         font-size:30px;
     }
 
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product img{
+        height:300px;
+    }
+
     .cart-box{
-        width:90%;
+        width:92%;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
+
 <header>
 
-    <div class="logo">MF COLLECTION</div>
+<div class="logo">
+MF COLLECTION
+</div>
 
-    <nav>
-        <a href="#machines">Air Bud Machines</a>
-        <a href="#jewellery">Jewellery</a>
-        <a href="#reviews">Reviews</a>
+<nav>
 
-        <a href="#" class="cart" onclick="openCart(); return false;">
-            🛒 Cart <span id="count">0</span>
-        </a>
-    </nav>
+<a href="#machines">
+🎧 Air Bud
+</a>
+
+<a href="#fashion">
+👕 Fashion
+</a>
+
+<a href="#jewellery">
+💎 Jewellery
+</a>
+
+<a href="#reviews">
+⭐ Reviews
+</a>
+
+<a href="#" class="cart" onclick="openCart();return false;">
+🛒 Cart <span id="count">0</span>
+</a>
+
+</nav>
 
 </header>
 
 
 <!-- HERO -->
+
 <div class="hero">
 
-    <div>
+<div class="hero-content">
 
-        <h1>MF COLLECTION</h1>
+<h1>MF COLLECTION</h1>
 
-        <p>
-            Premium Products • Stylish Accessories • Elegant Jewellery
-        </p>
+<p>
+Premium Products • Stylish Accessories • Elegant Jewellery
+</p>
 
-        <a href="#machines" class="shop-btn">
-            SHOP NOW
-        </a>
+<a href="#machines" class="shop-btn">
+SHOP NOW
+</a>
 
-    </div>
+</div>
 
 </div>
 
 
-<!-- AIR BUD COVER MACHINES -->
+<!-- AIR BUD / ACCESSORIES -->
+
 <section id="machines">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>🎧 Air Bud Cover Machines</h2>
+<h2>🎧 Air Bud Cover & Accessories</h2>
 
-        <p>
-            Smart & Stylish Accessories for Your Air Buds
-        </p>
+<p>
+Smart & Stylish Products for Everyday Use
+</p>
 
-    </div>
-
-
-    <div class="products">
-
-        <!-- Trimmer -->
-        <div class="product">
-
-            <img src="bot.jpeg" alt="Rechargeable Hair Trimmer">
-
-            <div class="info">
-
-                <h3>Rechargeable Hair Trimmer</h3>
-
-                <p>Double sided</p>
-
-                <div class="price">
-                    Rs. 1,500
-                </div>
-
-                <button class="add"
-                onclick="addCart('Rechargeable Hair Trimmer',1500)">
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <!-- Earbud Cover -->
-        <div class="product">
-
-            <img src="air.jpeg" alt="Earbud Safety Covers">
-
-            <div class="info">
-
-                <h3>Earbud Safety Covers</h3>
-
-                <p>Silicon Pro 2</p>
-
-                <div class="price">
-                    Rs. 600
-                </div>
-
-                <button class="add"
-                onclick="addCart('Earbud Safety Covers',600)">
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </div>
+<div class="products">
 
 
-        <!-- Blackhead Remover -->
-        <div class="product">
+<!-- TRIMMER -->
 
-            <img src="bhr.jpeg" alt="Black Head Remover">
+<div class="product">
 
-            <div class="info">
+<img src="bot.jpeg" alt="Rechargeable Hair Trimmer">
 
-                <h3>Black Head Remover</h3>
+<div class="info">
 
-                <p>3 modes machine</p>
+<h3>
+Rechargeable Hair Trimmer
+</h3>
 
-                <div class="price">
-                    Rs. 1,100
-                </div>
+<p>
+Double sided
+</p>
 
-                <button class="add"
-                onclick="addCart('Black Head Remover',1100)">
-                    ADD TO CART
-                </button>
+<div class="price">
+Rs. 1,500
+</div>
 
-            </div>
+<button class="add"
+onclick="addCart('Rechargeable Hair Trimmer',1500)">
+ADD TO CART
+</button>
 
-        </div>
+</div>
+
+</div>
 
 
-        <!-- Tracksuit -->
-        <div class="product">
+<!-- EARBUD -->
 
-            <img src="ts.jpeg" alt="Fabrik Tracksuit">
+<div class="product">
 
-            <div class="info">
+<img src="air.jpeg" alt="Earbud Safety Covers">
 
-                <h3>Fabrik Tracksuit</h3>
+<div class="info">
 
-                <p>MF exclusive collection</p>
+<h3>
+Earbud Safety Covers
+</h3>
 
-                <div class="price">
-                    Rs. 2,500
-                </div>
+<p>
+Silicon Pro 2
+</p>
 
-                <button class="add"
-                onclick="addCart('Fabrik Tracksuit',2500)">
-                    ADD TO CART
-                </button>
+<div class="price">
+Rs. 600
+</div>
 
-            </div>
+<button class="add"
+onclick="addCart('Earbud Safety Covers',600)">
+ADD TO CART
+</button>
 
-        </div>
+</div>
 
-    </div>
+</div>
+
+
+<!-- BLACKHEAD -->
+
+<div class="product">
+
+<img src="bhr.jpeg" alt="Black Head Remover">
+
+<div class="info">
+
+<h3>
+Black Head Remover
+</h3>
+
+<p>
+3 modes machine
+</p>
+
+<div class="price">
+Rs. 1,100
+</div>
+
+<button class="add"
+onclick="addCart('Black Head Remover',1100)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- TRACKSUIT -->
+
+<div class="product">
+
+<img src="ts.jpeg" alt="Fabrik Tracksuit">
+
+<div class="info">
+
+<h3>
+Fabrik Tracksuit
+</h3>
+
+<p>
+MF exclusive collection
+</p>
+
+<div class="price">
+Rs. 2,500
+</div>
+
+<button class="add"
+onclick="addCart('Fabrik Tracksuit',2500)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- FASHION -->
+
 <section id="fashion">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>👕 Fashion Collection</h2>
+<h2>👕 Fashion Collection</h2>
 
-        <p>
-            Premium T-Shirts & Trousers
-        </p>
+<p>
+Premium T-Shirts & Trousers
+</p>
 
-    </div>
+</div>
 
+<div class="products">
 
-    <div class="products">
+<div class="product">
 
-        <div class="product">
+<img src="IPO.jpeg"
+alt="Classic Pink T-Shirt and Black Trouser">
 
-            <img src="IPO.jpeg" alt="Pink T-Shirt and Black Trouser">
+<div class="info">
 
-            <div class="info">
+<h3>
+Classic Pink T-Shirt and Black Trouser
+</h3>
 
-                <h3>Classic Pink T-Shirt and Black Trouser</h3>
+<p>
+Premium casual wear
+</p>
 
-                <p>Premium casual wear</p>
+<div class="price">
+Rs. 2,000
+</div>
 
-                <div class="price">
-                    Rs. 2,000
-                </div>
+<button class="add"
+onclick="addCart('Classic Pink T-Shirt and Black Trouser',2000)">
+ADD TO CART
+</button>
 
-                <button class="add"
-                onclick="addCart('Classic Pink T-Shirt and Black Trouser',2000)">
-                    ADD TO CART
-                </button>
+</div>
 
-            </div>
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- JEWELLERY -->
+
 <section id="jewellery">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>💎 Jewellery Collection</h2>
+<h2>💎 Jewellery Collection</h2>
 
-        <p>
-            Elegant accessories for every occasion
-        </p>
+<p>
+Elegant accessories for every occasion
+</p>
 
-    </div>
+</div>
 
-
-    <div class="products">
-
-        <div class="product">
-
-            <img src="sil.jpeg" alt="Silver Bracelet">
-
-            <div class="info">
-
-                <h3>Silver Bracelet</h3>
-
-                <p>Elegant jewellery design</p>
-
-                <div class="price">
-                    Rs. 1,000
-                </div>
-
-                <button class="add"
-                onclick="addCart('Silver Bracelet',1000)">
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </div>
+<div class="products">
 
 
-        <div class="product">
+<!-- SILVER -->
 
-            <img src="loc.jpeg" alt="Luxury Locket">
+<div class="product">
 
-            <div class="info">
+<img src="sil.jpeg" alt="Silver Bracelet">
 
-                <h3>Luxury Locket</h3>
+<div class="info">
 
-                <p>Beautiful premium locket</p>
+<h3>
+Silver Bracelet
+</h3>
 
-                <div class="price">
-                    Rs. 700
-                </div>
+<p>
+Elegant jewellery design
+</p>
 
-                <button class="add"
-                onclick="addCart('Luxury Locket',700)">
-                    ADD TO CART
-                </button>
+<div class="price">
+Rs. 1,000
+</div>
 
-            </div>
+<button class="add"
+onclick="addCart('Silver Bracelet',1000)">
+ADD TO CART
+</button>
 
-        </div>
+</div>
 
-
-        <div class="product">
-
-            <img src="gol.jpeg" alt="Beautiful Bracelet">
-
-            <div class="info">
-
-                <h3>Beautiful Bracelet</h3>
-
-                <p>Stylish everyday jewellery</p>
-
-                <div class="price">
-                    Rs. 1,000
-                </div>
-
-                <button class="add"
-                onclick="addCart('Beautiful Bracelet',1000)">
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="product">
+<!-- LOCKET -->
 
-            <img src="rin.jpeg" alt="Luxury Rings">
+<div class="product">
 
-            <div class="info">
+<img src="loc.jpeg" alt="Luxury Locket">
 
-                <h3>Luxury Rings</h3>
+<div class="info">
 
-                <p>Exclusive MF collection</p>
+<h3>
+Luxury Locket
+</h3>
 
-                <div class="price">
-                    Rs. 750
-                </div>
+<p>
+Beautiful premium locket
+</p>
 
-                <button class="add"
-                onclick="addCart('Luxury Rings',750)">
-                    ADD TO CART
-                </button>
+<div class="price">
+Rs. 700
+</div>
 
-            </div>
+<button class="add"
+onclick="addCart('Luxury Locket',700)">
+ADD TO CART
+</button>
 
-        </div>
+</div>
 
-    </div>
+</div>
+
+
+<!-- BRACELET -->
+
+<div class="product">
+
+<img src="gol.jpeg" alt="Beautiful Bracelet">
+
+<div class="info">
+
+<h3>
+Beautiful Bracelet
+</h3>
+
+<p>
+Stylish everyday jewellery
+</p>
+
+<div class="price">
+Rs. 1,000
+</div>
+
+<button class="add"
+onclick="addCart('Beautiful Bracelet',1000)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- RINGS -->
+
+<div class="product">
+
+<img src="rin.jpeg" alt="Luxury Rings">
+
+<div class="info">
+
+<h3>
+Luxury Rings
+</h3>
+
+<p>
+Exclusive MF collection
+</p>
+
+<div class="price">
+Rs. 750
+</div>
+
+<button class="add"
+onclick="addCart('Luxury Rings',750)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- TRUST SECTION -->
-<section>
+<!-- TRUST -->
 
-    <div class="section-title">
+<section class="trust-section">
 
-        <h2>Why Shop With MF COLLECTION?</h2>
+<div class="section-title">
 
-        <p>Simple and easy shopping experience</p>
+<h2>Why Shop With Us?</h2>
 
-    </div>
+<p>
+A simple and easy shopping experience
+</p>
 
+</div>
 
-    <div class="trust">
+<div class="trust">
 
-        <div class="trust-box">
-            <h3>📱 Easy Ordering</h3>
-            <p>Order directly through WhatsApp.</p>
-        </div>
+<div class="trust-box">
 
-        <div class="trust-box">
-            <h3>🛍️ Quality Products</h3>
-            <p>Stylish products at listed prices.</p>
-        </div>
+<h3>📱 Easy Ordering</h3>
 
-        <div class="trust-box">
-            <h3>💬 Customer Support</h3>
-            <p>Contact us through WhatsApp for help.</p>
-        </div>
+<p>
+Order directly through WhatsApp.
+</p>
 
-        <div class="trust-box">
-            <h3>🚚 Delivery</h3>
-            <p>Delivery details can be confirmed on WhatsApp.</p>
-        </div>
+</div>
 
-    </div>
+<div class="trust-box">
+
+<h3>🛍️ Quality Products</h3>
+
+<p>
+Stylish products at listed prices.
+</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>💬 Customer Support</h3>
+
+<p>
+Contact us through WhatsApp for help.
+</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>🚚 Delivery</h3>
+
+<p>
+Delivery details can be confirmed on WhatsApp.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- REVIEWS -->
+
 <section id="reviews" class="reviews-section">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>⭐ Customer Reviews</h2>
+<h2>⭐ Customer Reviews</h2>
 
-        <p>
-            Share your experience with MF COLLECTION
-        </p>
+<p>
+Share your experience with MF COLLECTION
+</p>
 
-    </div>
-
-
-    <div class="review-form">
-
-        <input
-        type="text"
-        id="reviewName"
-        placeholder="Your Name"
-        maxlength="40">
-
-        <select id="reviewRating">
-
-            <option value="5">⭐⭐⭐⭐⭐ - 5 Stars</option>
-            <option value="4">⭐⭐⭐⭐ - 4 Stars</option>
-            <option value="3">⭐⭐⭐ - 3 Stars</option>
-            <option value="2">⭐⭐ - 2 Stars</option>
-            <option value="1">⭐ - 1 Star</option>
-
-        </select>
-
-        <textarea
-        id="reviewText"
-        placeholder="Write your review..."
-        maxlength="250"></textarea>
-
-        <button onclick="addReview()">
-            SUBMIT REVIEW
-        </button>
-
-    </div>
+</div>
 
 
-    <div class="review-list" id="reviewList">
+<div class="review-form">
 
-        <div class="review">
+<input
+type="text"
+id="reviewName"
+placeholder="Your Name"
+maxlength="40">
 
-            <h3>Customer Reviews</h3>
+<select id="reviewRating">
 
-            <div class="stars">⭐⭐⭐⭐⭐</div>
+<option value="5">
+⭐⭐⭐⭐⭐ - 5 Stars
+</option>
 
-            <p>
-                Your genuine customer reviews will appear here.
-            </p>
+<option value="4">
+⭐⭐⭐⭐ - 4 Stars
+</option>
 
-        </div>
+<option value="3">
+⭐⭐⭐ - 3 Stars
+</option>
 
-    </div>
+<option value="2">
+⭐⭐ - 2 Stars
+</option>
+
+<option value="1">
+⭐ - 1 Star
+</option>
+
+</select>
+
+<textarea
+id="reviewText"
+placeholder="Write your review..."
+maxlength="250">
+</textarea>
+
+<button onclick="addReview()">
+SUBMIT REVIEW
+</button>
+
+</div>
+
+
+<div class="review-list" id="reviewList">
+
+<div class="review">
+
+<h3>
+Customer Reviews
+</h3>
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+Your genuine customer reviews will appear here.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- CART -->
+
 <div class="cart-box" id="cartBox">
 
-    <span class="close" onclick="closeCart()">✕</span>
+<span class="close" onclick="closeCart()">
+✕
+</span>
 
-    <h2>Your Cart</h2>
+<h2>
+Your Cart
+</h2>
 
-    <div id="cartItems">
-        <p>Your cart is empty.</p>
-    </div>
+<div id="cartItems">
 
-    <div class="total">
+<p>
+Your cart is empty.
+</p>
 
-        Total: Rs.
-        <span id="total">0</span>
+</div>
 
-    </div>
+<div class="total">
 
-    <a
-    id="whatsapp"
-    class="whatsapp"
-    target="_blank"
-    href="https://wa.me/923202063712">
+Total: Rs.
+<span id="total">0</span>
 
-        ORDER ON WHATSAPP
+</div>
 
-    </a>
+<a
+id="whatsapp"
+class="whatsapp"
+target="_blank"
+href="https://wa.me/923202063712">
+
+ORDER ON WHATSAPP
+
+</a>
 
 </div>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-    <h2>MF COLLECTION</h2>
+<h2>
+MF COLLECTION
+</h2>
 
-    <p>Premium Fashion & Jewellery</p>
+<p>
+Premium Fashion • Jewellery • Accessories
+</p>
 
-    <p>WhatsApp: 03202063712</p>
+<p>
+WhatsApp: 03202063712
+</p>
 
-    <br>
+<br>
 
-    <p>
-        © 2026 MF COLLECTION. All Rights Reserved.
-    </p>
+<p>
+© 2026 MF COLLECTION. All Rights Reserved.
+</p>
 
 </footer>
 
@@ -895,141 +1141,132 @@ footer p{
 
 /* CART */
 
-let cart = [];
+let cart=[];
 
 
-function addCart(name, price){
+function addCart(name,price){
 
-    cart.push({
-        name:name,
-        price:price
-    });
+cart.push({
+name:name,
+price:price
+});
 
-    updateCart();
+updateCart();
 
-    alert(name + " added to cart!");
+alert(name+" added to cart!");
 
 }
 
 
 function removeItem(index){
 
-    cart.splice(index,1);
+cart.splice(index,1);
 
-    updateCart();
+updateCart();
 
 }
 
 
 function updateCart(){
 
-    document.getElementById("count").innerText =
-        cart.length;
+document.getElementById("count").innerText=cart.length;
+
+let box=document.getElementById("cartItems");
 
 
-    let box =
-        document.getElementById("cartItems");
+if(cart.length===0){
+
+box.innerHTML="<p>Your cart is empty.</p>";
+
+document.getElementById("total").innerText="0";
+
+document.getElementById("whatsapp").href=
+"https://wa.me/923202063712";
+
+return;
+
+}
 
 
-    if(cart.length === 0){
-
-        box.innerHTML =
-            "<p>Your cart is empty.</p>";
-
-        document.getElementById("total").innerText =
-            "0";
-
-        document.getElementById("whatsapp").href =
-            "https://wa.me/923202063712";
-
-        return;
-    }
+let html="";
+let total=0;
 
 
-    let html = "";
+cart.forEach((item,index)=>{
 
-    let total = 0;
+total+=item.price;
 
+html+=`
 
-    cart.forEach((item,index)=>{
+<div class="cart-item">
 
-        total += item.price;
+<h4>${item.name}</h4>
 
+<p>
+Rs. ${item.price.toLocaleString()}
+</p>
 
-        html += `
+<span class="remove"
+onclick="removeItem(${index})">
 
-        <div class="cart-item">
+Remove
 
-            <h4>${item.name}</h4>
+</span>
 
-            <p>
-                Rs. ${item.price.toLocaleString()}
-            </p>
+</div>
 
-            <span
-            class="remove"
-            onclick="removeItem(${index})">
+`;
 
-                Remove
-
-            </span>
-
-        </div>
-
-        `;
-
-    });
+});
 
 
-    box.innerHTML = html;
+box.innerHTML=html;
 
 
-    document.getElementById("total").innerText =
-        total.toLocaleString();
+document.getElementById("total").innerText=
+total.toLocaleString();
 
 
-    let message =
-        "Assalam o Alaikum, I want to order:%0A%0A";
+let message=
+"Assalam o Alaikum, I want to order:%0A%0A";
 
 
-    cart.forEach(item=>{
+cart.forEach(item=>{
 
-        message +=
-            "• " +
-            item.name +
-            " - Rs. " +
-            item.price.toLocaleString() +
-            "%0A";
+message+=
+"• "+item.name+
+" - Rs. "+
+item.price.toLocaleString()+
+"%0A";
 
-    });
-
-
-    message +=
-        "%0ATotal: Rs. " +
-        total.toLocaleString();
+});
 
 
-    document.getElementById("whatsapp").href =
-        "https://wa.me/923202063712?text=" +
-        message;
+message+=
+"%0ATotal: Rs. "+
+total.toLocaleString();
+
+
+document.getElementById("whatsapp").href=
+"https://wa.me/923202063712?text="+message;
 
 }
 
 
 function openCart(){
 
-    document
-    .getElementById("cartBox")
-    .classList.add("open");
+document
+.getElementById("cartBox")
+.classList.add("open");
 
 }
 
 
 function closeCart(){
 
-    document
-    .getElementById("cartBox")
-    .classList.remove("open");
+document
+.getElementById("cartBox")
+.classList.remove("open");
 
 }
 
@@ -1038,117 +1275,112 @@ function closeCart(){
 
 function addReview(){
 
-    let name =
-        document.getElementById("reviewName").value.trim();
+let name=
+document.getElementById("reviewName").value.trim();
 
-    let rating =
-        document.getElementById("reviewRating").value;
+let rating=
+document.getElementById("reviewRating").value;
 
-    let text =
-        document.getElementById("reviewText").value.trim();
-
-
-    if(name === "" || text === ""){
-
-        alert("Please enter your name and review.");
-
-        return;
-
-    }
+let text=
+document.getElementById("reviewText").value.trim();
 
 
-    let stars = "⭐".repeat(Number(rating));
+if(name===""||text===""){
+
+alert("Please enter your name and review.");
+
+return;
+
+}
 
 
-    let review = {
+let review={
 
-        name:name,
-        rating:rating,
-        text:text
+name:name,
+rating:rating,
+text:text
 
-    };
-
-
-    let reviews =
-        JSON.parse(localStorage.getItem("mfReviews")) || [];
+};
 
 
-    reviews.push(review);
+let reviews=
+JSON.parse(localStorage.getItem("mfReviews"))||[];
 
 
-    localStorage.setItem(
-        "mfReviews",
-        JSON.stringify(reviews)
-    );
+reviews.push(review);
 
 
-    document.getElementById("reviewName").value = "";
-
-    document.getElementById("reviewText").value = "";
-
-
-    displayReviews();
+localStorage.setItem(
+"mfReviews",
+JSON.stringify(reviews)
+);
 
 
-    alert("Thank you for your review!");
+document.getElementById("reviewName").value="";
 
+document.getElementById("reviewText").value="";
+
+
+displayReviews();
+
+alert("Thank you for your review!");
 
 }
 
 
 function displayReviews(){
 
-    let reviews =
-        JSON.parse(localStorage.getItem("mfReviews")) || [];
+let reviews=
+JSON.parse(localStorage.getItem("mfReviews"))||[];
+
+let list=
+document.getElementById("reviewList");
 
 
-    let list =
-        document.getElementById("reviewList");
+if(reviews.length===0){
+
+return;
+
+}
 
 
-    if(reviews.length === 0){
-
-        return;
-
-    }
+list.innerHTML="";
 
 
-    list.innerHTML = "";
+reviews.forEach(review=>{
 
+list.innerHTML+=`
 
-    reviews.forEach(review=>{
+<div class="review">
 
-        list.innerHTML += `
+<h3>
+${escapeHTML(review.name)}
+</h3>
 
-        <div class="review">
+<div class="stars">
+${"⭐".repeat(Number(review.rating))}
+</div>
 
-            <h3>${escapeHTML(review.name)}</h3>
+<p>
+${escapeHTML(review.text)}
+</p>
 
-            <div class="stars">
-                ${"⭐".repeat(Number(review.rating))}
-            </div>
+</div>
 
-            <p>
-                ${escapeHTML(review.text)}
-            </p>
+`;
 
-        </div>
-
-        `;
-
-    });
+});
 
 }
 
 
 function escapeHTML(text){
 
-    let div =
-        document.createElement("div");
+let div=document.createElement("div");
 
-    div.textContent = text;
+div.textContent=text;
 
-    return div.innerHTML;
+return div.innerHTML;
 
 }
 
@@ -1159,6 +1391,3 @@ displayReviews();
 
 </body>
 </html>
-
-   
-  
