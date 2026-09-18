@@ -3,428 +3,743 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MF COLLECTION</title>
-
-
-    <style>
-
-        /* =========================
-           BASIC SETTINGS
-        ========================= */
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #eef6ff;
-            color: #222;
-        }
-
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px #cdd9e5;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #1769aa;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 18px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #1769aa;
-        }
-
-
-        /* =========================
-           TOP BANNER
-        ========================= */
-
-        .top-banner {
-            background: linear-gradient(
-                120deg,
-                #1769aa,
-                #4facfe,
-                #00c6ff
-            );
-
-            color: white;
-            text-align: center;
-            padding: 12px;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 480px;
-
-            background:
-                linear-gradient(
-                    rgba(0, 60, 120, 0.55),
-                    rgba(0, 130, 200, 0.35)
-                ),
-                url("IPO.jpeg");
-
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 40px 20px;
-        }
-
-        .hero-content {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 35px;
-            border-radius: 18px;
-            max-width: 650px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .hero h1 {
-            color: #1769aa;
-            font-size: 45px;
-            margin: 0 0 10px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        .shop-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 13px 28px;
-            background: #1769aa;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-        }
-
-        .shop-button:hover {
-            background: #0d4f83;
-        }
-
-
-        /* =========================
-           VIDEO STYLE AREA
-        ========================= */
-
-        .video-section {
-            text-align: center;
-            padding: 45px 20px;
-            background: white;
-        }
-
-        .video-box {
-            max-width: 800px;
-            margin: auto;
-            background: #dff3ff;
-            border-radius: 18px;
-            padding: 15px;
-        }
-
-        .video-box video {
-            width: 100%;
-            max-height: 380px;
-            border-radius: 12px;
-            background: #c5e8fa;
-        }
-
-        .video-box p {
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-
-        /* =========================
-           SECTION
-        ========================= */
-
-        section {
-            padding: 55px 6%;
-        }
-
-        .title {
-            text-align: center;
-            color: #1769aa;
-            font-size: 30px;
-            margin-bottom: 35px;
-        }
-
-
-        /* =========================
-           PRODUCTS
-        ========================= */
-
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .product {
-            background: white;
-            width: 245px;
-            padding: 15px;
-            border-radius: 15px;
-            text-align: center;
-
-            box-shadow: 0 5px 18px #d5e2ed;
-
-            transition: 0.3s;
-        }
-
-        .product:hover {
-            transform: translateY(-7px);
-        }
-
-        .product img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .product h3 {
-            font-size: 18px;
-            min-height: 42px;
-        }
-
-        .price {
-            color: #1769aa;
-            font-size: 21px;
-            font-weight: bold;
-        }
-
-        .order-button {
-            border: none;
-            background: #20bf55;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .order-button:hover {
-            background: #159642;
-        }
-
-
-        /* =========================
-           ABOUT / FEATURES
-        ========================= */
-
-        .features {
-            background: #dff2ff;
-            text-align: center;
-        }
-
-        .feature-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .feature {
-            background: white;
-            width: 220px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px #cbdce9;
-        }
-
-        .feature h3 {
-            color: #1769aa;
-        }
-
-
-        /* =========================
-           REVIEWS
-        ========================= */
-
-        .reviews {
-            max-width: 650px;
-            margin: auto;
-        }
-
-        .review-form {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px #d5e2ed;
-        }
-
-        .review-form input,
-        .review-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-
-        .review-form button {
-            background: #1769aa;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .review {
-            background: white;
-            margin-top: 15px;
-            padding: 18px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px #d5e2ed;
-        }
-
-        .review strong {
-            color: #1769aa;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: white;
-            text-align: center;
-        }
-
-        .number {
-            color: #20a84b;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 8px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #1769aa;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        footer h2 {
-            margin-top: 0;
-        }
-
-
-        /* =========================
-           FLOATING WHATSAPP
-        ========================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-
-            width: 58px;
-            height: 58px;
-
-            background: #20bf55;
-            color: white;
-
-            border-radius: 50%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-decoration: none;
-
-            font-size: 27px;
-
-            box-shadow: 0 4px 15px #999;
-
-            z-index: 200;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .hero-content {
-                padding: 25px;
-            }
-
-            .product {
-                width: 90%;
-                max-width: 320px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MF COLLECTION | Premium Store</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f6f8fc;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:9px;
+    font-size:14px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.logo span{
+    color:#111827;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+nav a{
+    color:#333;
+    font-size:15px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+.cart-button{
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:600px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(15,23,42,.90),
+        rgba(37,99,235,.55)
+    ),
+    url("IPO.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:60px 7%;
+}
+
+.hero-content{
+    max-width:650px;
+    color:white;
+}
+
+.hero-small{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    padding:9px 16px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.6;
+    color:#e5e7eb;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:white;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.secondary-btn{
+    background:white;
+    color:#111827;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    background:white;
+    padding:25px 7%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.feature-icon{
+    font-size:28px;
+}
+
+.feature h3{
+    font-size:15px;
+}
+
+.feature p{
+    font-size:12px;
+    color:#777;
+    margin-top:4px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:70px 7%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-heading h2{
+    font-size:36px;
+    color:#111827;
+}
+
+.section-heading p{
+    margin-top:10px;
+    color:#777;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.category{
+    border:1px solid #ddd;
+    background:white;
+    padding:11px 22px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.category:hover{
+    background:#2563eb;
+    color:white;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.product-image{
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    display:block;
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#2563eb;
+    color:white;
+    padding:6px 11px;
+    border-radius:15px;
+    font-size:12px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:17px;
+    min-height:42px;
+}
+
+.product-info p{
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
+}
+
+.price{
+    font-size:21px !important;
+    font-weight:bold;
+    color:#2563eb !important;
+    margin:13px 0 !important;
+}
+
+.product-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.add-cart{
+    flex:1;
+    border:0;
+    background:#111827;
+    color:white;
+    padding:11px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.buy-now{
+    flex:1;
+    border:0;
+    background:#22c55e;
+    color:white;
+    padding:11px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.add-cart:hover{
+    background:#2563eb;
+}
+
+.buy-now:hover{
+    background:#16a34a;
+}
+
+
+/* =========================
+   PROMO
+========================= */
+
+.promo{
+    background:
+    linear-gradient(
+        120deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    color:white;
+    border-radius:25px;
+    padding:55px;
+    text-align:center;
+}
+
+.promo h2{
+    font-size:35px;
+}
+
+.promo p{
+    margin:12px 0 25px;
+}
+
+.promo a{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    padding:13px 25px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review-container{
+    max-width:800px;
+    margin:auto;
+}
+
+.review-form{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.review-form input,
+.review-form textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:12px;
+}
+
+.review-form button{
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:12px 22px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.review{
+    background:white;
+    margin-top:15px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.review strong{
+    color:#2563eb;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#111827;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    color:white;
+}
+
+.contact p{
+    color:#d1d5db;
+    margin:8px;
+}
+
+.phone{
+    color:#4ade80 !important;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#080d18;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h2{
+    color:#60a5fa;
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#aaa;
+    margin:7px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+    z-index:2000;
+}
+
+
+/* =========================
+   CART
+========================= */
+
+.cart{
+    position:fixed;
+    right:-430px;
+    top:0;
+
+    width:400px;
+    max-width:95%;
+
+    height:100vh;
+
+    background:white;
+
+    z-index:3000;
+
+    padding:25px;
+
+    box-shadow:-5px 0 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+    overflow-y:auto;
+}
+
+.cart.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.cart-header h2{
+    color:#2563eb;
+}
+
+.close-cart{
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-item{
+    border-bottom:1px solid #eee;
+    padding:15px 0;
+}
+
+.cart-item h3{
+    font-size:15px;
+}
+
+.cart-item p{
+    color:#2563eb;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+.remove{
+    margin-top:8px;
+    border:0;
+    color:#ef4444;
+    background:none;
+    cursor:pointer;
+}
+
+.cart-total{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+.checkout{
+    width:100%;
+    border:0;
+    background:#22c55e;
+    color:white;
+    padding:14px;
+    border-radius:8px;
+    margin-top:15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+/* =========================
+   CHECKOUT FORM
+========================= */
+
+.checkout-form{
+    display:none;
+    margin-top:20px;
+}
+
+.checkout-form.show{
+    display:block;
+}
+
+.checkout-form input,
+.checkout-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.whatsapp-choice{
+    display:flex;
+    gap:8px;
+}
+
+.whatsapp-choice button{
+    flex:1;
+    border:0;
+    padding:11px;
+    border-radius:8px;
+    cursor:pointer;
+    background:#22c55e;
+    color:white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:500px;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .promo{
+        padding:35px 20px;
+    }
+
+    .promo h2{
+        font-size:28px;
+    }
+
+}
+
+
+/* SEARCH */
+
+.search-box{
+    max-width:500px;
+    margin:0 auto 30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    outline:none;
+    font-size:15px;
+}
+
+</style>
 
 </head>
 
@@ -432,81 +747,1460 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+<!-- TOP BAR -->
 
-    <header>
+<div class="topbar">
 
-        <div class="logo">
-            MF COLLECTION
-        </div>
+    🚚 Cash on Delivery Available | 📱 Easy WhatsApp Orders
 
-        <nav>
-
-            <a href="#home">Home</a>
-
-            <a href="#accessories">Accessories</a>
-
-            <a href="#fashion">Fashion</a>
-
-            <a href="#jewellery">Jewellery</a>
-
-            <a href="#reviews">Reviews</a>
-
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-    </header>
+</div>
 
 
-    <!-- TOP OFFER -->
+<!-- HEADER -->
 
-    <div class="top-banner">
+<header>
 
-        ✨ Welcome to MF COLLECTION — Shop Our Latest Collection ✨
-
+    <div class="logo">
+        MF <span>COLLECTION</span>
     </div>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <nav>
 
-    <section class="hero" id="home">
+        <a href="#home">Home</a>
 
-        <div class="hero-content">
+        <a href="#accessories">Accessories</a>
 
-            <h1>MF COLLECTION</h1>
+        <a href="#fashion">Fashion</a>
 
-            <p>
-                Fashion, Jewellery & Accessories
-            </p>
+        <a href="#jewellery">Jewellery</a>
 
-            <p>
-                Simple shopping. Easy WhatsApp ordering.
-            </p>
+        <a href="#reviews">Reviews</a>
 
-            <a href="#fashion" class="shop-button">
-                Shop Now
+        <a href="#contact">Contact</a>
+
+        <button
+            class="cart-button"
+            onclick="openCart()">
+
+            🛒 Cart (<span id="cartCount">0</span>)
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            ✨ Welcome to MF COLLECTION
+        </span>
+
+        <h1>
+            Style That
+            <span>Stands Out.</span>
+        </h1>
+
+        <p>
+            Discover our collection of fashion,
+            jewellery and useful accessories.
+            Easy ordering directly through WhatsApp.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#fashion"
+                class="primary-btn">
+
+                Shop Collection
+
+            </a>
+
+            <a
+                href="#contact"
+                class="secondary-btn">
+
+                Contact Us
+
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         VIDEO AREA
-    ========================= -->
+<!-- FEATURES -->
 
-    <section class="video-section">
+<div class="features">
 
-        <h2 class="title">
-            🎥 Featured Collection
+    <div class="feature">
+
+        <div class="feature-icon">🚚</div>
+
+        <div>
+
+            <h3>Delivery</h3>
+
+            <p>Delivery available</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">💵</div>
+
+        <div>
+
+            <h3>Cash on Delivery</h3>
+
+            <p>COD available</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">📱</div>
+
+        <div>
+
+            <h3>WhatsApp Order</h3>
+
+            <p>Easy ordering</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">⭐</div>
+
+        <div>
+
+            <h3>Quality</h3>
+
+            <p>Quality products</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ACCESSORIES -->
+
+<section id="accessories">
+
+    <div class="section-heading">
+
+        <h2>Accessories</h2>
+
+        <p>
+            Useful products for everyday life
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search products..."
+            onkeyup="searchProducts()">
+
+    </div>
+
+
+    <div class="products" id="productList">
+
+
+        <!-- TRIMMER -->
+
+        <div
+            class="product"
+            data-name="Rechargeable Hair Trimmer">
+
+            <div class="product-image">
+
+                <img src="bot.jpeg">
+
+                <span class="badge">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Rechargeable Hair Trimmer
+                </h3>
+
+                <p>
+                    Easy to use rechargeable trimmer.
+                </p>
+
+                <p class="price">
+                    Rs. 1,500
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Rechargeable Hair Trimmer',
+                        1500
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Rechargeable Hair Trimmer',
+                        1500
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EARBUD -->
+
+        <div
+            class="product"
+            data-name="Earbud Safety Covers">
+
+            <div class="product-image">
+
+                <img src="air.jpeg">
+
+                <span class="badge">
+                    New
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Earbud Safety Covers
+                </h3>
+
+                <p>
+                    Protective earbud covers.
+                </p>
+
+                <p class="price">
+                    Rs. 600
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Earbud Safety Covers',
+                        600
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Earbud Safety Covers',
+                        600
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLACK HEAD -->
+
+        <div
+            class="product"
+            data-name="Black Head Remover">
+
+            <div class="product-image">
+
+                <img src="bhr.jpeg">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Black Head Remover
+                </h3>
+
+                <p>
+                    Handy personal care accessory.
+                </p>
+
+                <p class="price">
+                    Rs. 1,100
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Black Head Remover',
+                        1100
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Black Head Remover',
+                        1100
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRACKSUIT -->
+
+        <div
+            class="product"
+            data-name="Fabrik Tracksuit">
+
+            <div class="product-image">
+
+                <img src="ts.jpeg">
+
+                <span class="badge">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Fabrik Tracksuit
+                </h3>
+
+                <p>
+                    Comfortable everyday tracksuit.
+                </p>
+
+                <p class="price">
+                    Rs. 2,500
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Fabrik Tracksuit',
+                        2500
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Fabrik Tracksuit',
+                        2500
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PROMO -->
+
+<section>
+
+    <div class="promo">
+
+        <h2>
+            ✨ Discover Your Style
         </h2>
 
-        <div class="video-box">
+        <p>
+            Shop fashion and accessories
+            from MF COLLECTION.
+        </p>
 
-            
+        <a href="#jewellery">
+            View Jewellery
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FASHION -->
+
+<section id="fashion">
+
+    <div class="section-heading">
+
+        <h2>Fashion Collection</h2>
+
+        <p>
+            Simple and stylish fashion
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img src="IPO.jpeg">
+
+                <span class="badge">
+                    Featured
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Classic Pink T-Shirt and Black Trouser
+                </h3>
+
+                <p>
+                    Stylish clothing collection.
+                </p>
+
+                <p class="price">
+                    Rs. 2,000
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Classic Pink T-Shirt and Black Trouser',
+                        2000
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Classic Pink T-Shirt and Black Trouser',
+                        2000
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- JEWELLERY -->
+
+<section id="jewellery">
+
+    <div class="section-heading">
+
+        <h2>Jewellery Collection</h2>
+
+        <p>
+            Beautiful accessories for your style
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- SILVER -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img src="sil.jpeg">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Silver Bracelet
+                </h3>
+
+                <p>
+                    Elegant bracelet design.
+                </p>
+
+                <p class="price">
+                    Rs. 1,000
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Silver Bracelet',
+                        1000
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Silver Bracelet',
+                        1000
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOCKET -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img src="loc.jpeg">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Luxury Locket
+                </h3>
+
+                <p>
+                    Beautiful locket design.
+                </p>
+
+                <p class="price">
+                    Rs. 700
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Luxury Locket',
+                        700
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Luxury Locket',
+                        700
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BRACELET -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img src="gol.jpeg">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Beautiful Bracelet
+                </h3>
+
+                <p>
+                    Stylish bracelet for everyday wear.
+                </p>
+
+                <p class="price">
+                    Rs. 1,000
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Beautiful Bracelet',
+                        1000
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Beautiful Bracelet',
+                        1000
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RINGS -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img src="rin.jpeg">
+
+                <span class="badge">
+                    New
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Luxury Rings
+                </h3>
+
+                <p>
+                    Stylish ring collection.
+                </p>
+
+                <p class="price">
+                    Rs. 750
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                        'Luxury Rings',
+                        750
+                        )">
+
+                        Add Cart
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="buyNow(
+                        'Luxury Rings',
+                        750
+                        )">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+    <div class="section-heading">
+
+        <h2>Customer Reviews</h2>
+
+        <p>
+            Share your shopping experience
+        </p>
+
+    </div>
+
+
+    <div class="review-container">
+
+        <div class="review-form">
+
+            <input
+                type="text"
+                id="reviewName"
+                placeholder="Your Name">
+
+            <textarea
+                id="reviewText"
+                rows="4"
+                placeholder="Write your review..."></textarea>
+
+            <button onclick="addReview()">
+                Submit Review
+            </button>
+
+        </div>
+
+        <div id="reviewList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <h2>
+            Contact MF COLLECTION
+        </h2>
+
+        <p>
+            Order or ask about products on WhatsApp
+        </p>
+
+    </div>
+
+
+    <p class="phone">
+        📱 03202063712
+    </p>
+
+    <p class="phone">
+        📱 03370362338
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        MF COLLECTION
+    </h2>
+
+    <p>
+        Fashion • Jewellery • Accessories
+    </p>
+
+    <p>
+        WhatsApp: 03202063712
+    </p>
+
+    <p>
+        WhatsApp: 03370362338
+    </p>
+
+    <p>
+        © 2026 MF COLLECTION. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    href="https://wa.me/923202063712"
+    target="_blank"
+    class="whatsapp">
+
+    💬
+
+</a>
+
+
+<!-- CART -->
+
+<div class="cart" id="cart">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <span
+            class="close-cart"
+            onclick="closeCart()">
+
+            ×
+
+        </span>
+
+    </div>
+
+
+    <div id="cartItems">
+
+        <p>Your cart is empty.</p>
+
+    </div>
+
+
+    <div class="cart-total">
+
+        Total: Rs.
+        <span id="cartTotal">0</span>
+
+    </div>
+
+
+    <button
+        class="checkout"
+        onclick="showCheckout()">
+
+        Continue to Order
+
+    </button>
+
+
+    <!-- CHECKOUT FORM -->
+
+    <div
+        class="checkout-form"
+        id="checkoutForm">
+
+        <h3 style="margin-bottom:15px;">
+            Order Details
+        </h3>
+
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Your Name">
+
+
+        <input
+            type="text"
+            id="customerPhone"
+            placeholder="Your Phone Number">
+
+
+        <textarea
+            id="customerAddress"
+            rows="3"
+            placeholder="Your Address"></textarea>
+
+
+        <p style="margin:10px 0;">
+            Choose WhatsApp Number:
+        </p>
+
+
+        <div class="whatsapp-choice">
+
+            <button
+                onclick="sendOrder('923202063712')">
+
+                03202063712
+
+            </button>
+
+
+            <button
+                onclick="sendOrder('923370362338')">
+
+                03370362338
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   CART
+========================= */
+
+var cart = [];
+
+
+function addToCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    updateCart();
+
+    openCart();
+
+}
+
+
+function updateCart(){
+
+    var items =
+        document.getElementById("cartItems");
+
+    var total = 0;
+
+
+    if(cart.length == 0){
+
+        items.innerHTML =
+            "<p>Your cart is empty.</p>";
+
+    }
+
+    else{
+
+        items.innerHTML = "";
+
+
+        for(var i = 0; i < cart.length; i++){
+
+            total += cart[i].price;
+
+
+            items.innerHTML +=
+
+                "<div class='cart-item'>" +
+
+                "<h3>" +
+                cart[i].name +
+                "</h3>" +
+
+                "<p>Rs. " +
+                cart[i].price +
+                "</p>" +
+
+                "<button class='remove' " +
+                "onclick='removeItem(" +
+                i +
+                ")'>" +
+
+                "Remove" +
+
+                "</button>" +
+
+                "</div>";
+
+        }
+
+    }
+
+
+    document.getElementById(
+        "cartTotal"
+    ).innerText = total;
+
+
+    document.getElementById(
+        "cartCount"
+    ).innerText = cart.length;
+
+}
+
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+
+function openCart(){
+
+    document
+        .getElementById("cart")
+        .classList.add("open");
+
+}
+
+
+function closeCart(){
+
+    document
+        .getElementById("cart")
+        .classList.remove("open");
+
+}
+
+
+/* =========================
+   BUY NOW
+========================= */
+
+function buyNow(name,price){
+
+    cart = [];
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    updateCart();
+
+    openCart();
+
+    showCheckout();
+
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function showCheckout(){
+
+    if(cart.length == 0){
+
+        alert(
+            "Please add a product first."
+        );
+
+        return;
+
+    }
+
+
+    document
+        .getElementById("checkoutForm")
+        .classList.add("show");
+
+}
+
+
+/* =========================
+   SEND ORDER
+========================= */
+
+function sendOrder(number){
+
+    if(cart.length == 0){
+
+        alert(
+            "Your cart is empty."
+        );
+
+        return;
+
+    }
+
+
+    var name =
+        document.getElementById(
+            "customerName"
+        ).value;
+
+
+    var phone =
+        document.getElementById(
+            "customerPhone"
+        ).value;
+
+
+    var address =
+        document.getElementById(
+            "customerAddress"
+        ).value;
+
+
+    if(
+        name == "" ||
+        phone == "" ||
+        address == ""
+    ){
+
+        alert(
+            "Please fill all order details."
+        );
+
+        return;
+
+    }
+
+
+    var message =
+        "Assalam-o-Alaikum MF COLLECTION,%0A%0A";
+
+
+    message +=
+        "*New Order*%0A%0A";
+
+
+    message +=
+        "Customer Name: " +
+        encodeURIComponent(name) +
+        "%0A";
+
+
+    message +=
+        "Phone: " +
+        encodeURIComponent(phone) +
+        "%0A";
+
+
+    message +=
+        "Address: " +
+        encodeURIComponent(address) +
+        "%0A%0A";
+
+
+    message +=
+        "*Products:*%0A";
+
+
+    var total = 0;
+
+
+    for(
+        var i = 0;
+        i < cart.length;
+        i++
+    ){
+
+        message +=
+            (i + 1) +
+            ". " +
+            encodeURIComponent(
+                cart[i].name
+            ) +
+            " - Rs. " +
+            cart[i].price +
+            "%0A";
+
+
+        total += cart[i].price;
+
+    }
+
+
+    message +=
+        "%0A*Total: Rs. " +
+        total +
+        "*";
+
+
+    window.open(
+        "https://wa.me/" +
+        number +
+        "?text=" +
+        message,
+        "_blank"
+    );
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchProducts(){
+
+    var search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
+
+    var products =
+        document.querySelectorAll(
+            ".product"
+        );
+
+
+    for(
+        var i = 0;
+        i < products.length;
+        i++
+    ){
+
+        var name =
+            products[i]
+            .getAttribute("data-name");
+
+
+        if(name){
+
+            if(
+                name
+                .toLowerCase()
+                .includes(search)
+            ){
+
+                products[i].style.display =
+                    "block";
+
+            }
+
+            else{
+
+                products[i].style.display =
+                    "none";
+
+            }
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+function addReview(){
+
+    var name =
+        document.getElementById(
+            "reviewName"
+        ).value.trim();
+
+
+    var text =
+        document.getElementById(
+            "reviewText"
+        ).value.trim();
+
+
+    if(
+        name == "" ||
+        text == ""
+    ){
+
+        alert(
+            "Please enter your name and review."
+        );
+
+        return;
+
+    }
+
+
+    var reviews =
+        JSON.parse(
+            localStorage.getItem(
+                "mfReviews"
+            )
+        ) || [];
+
+
+    reviews.push({
+        name:name,
+        text:text
+    });
+
+
+    localStorage.setItem(
+        "mfReviews",
+        JSON.stringify(reviews)
+    );
+
+
+    document.getElementById(
+        "reviewName"
+    ).value = "";
+
+
+    document.getElementById(
+        "reviewText"
+    ).value = "";
+
+
+    showReviews();
+
+}
+
+
+function showReviews(){
+
+    var reviews =
+        JSON.parse(
+            localStorage.getItem(
+                "mfReviews"
+            )
+        ) || [];
+
+
+    var list =
+        document.getElementById(
+            "reviewList"
+        );
+
+
+    list.innerHTML = "";
+
+
+    for(
+        var i = 0;
+        i < reviews.length;
+        i++
+    ){
+
+        list.innerHTML +=
+
+            "<div class='review'>" +
+
+            "<strong>⭐ " +
+            reviews[i].name +
+            "</strong>" +
+
+            "<p>" +
+            reviews[i].text +
+            "</p>" +
+
+            "</div>";
+
+    }
+
+}
+
+
+showReviews();
+
+
+updateCart();
+
+
+</script>
+
+
+</body>
+
+</html>
+
