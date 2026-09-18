@@ -9,256 +9,417 @@
 
     <title>MF COLLECTION</title>
 
+
     <style>
 
-        /* Simple Website CSS */
+        /* =========================
+           BASIC SETTINGS
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f8ff;
-            color: #333;
+            background: #eef6ff;
+            color: #222;
         }
 
-        /* Header */
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #ddd;
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px #cdd9e5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header h1 {
-            margin: 0;
-            color: #2563eb;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 8px 0;
-            color: #666;
-        }
-
-        /* Navigation */
-
-        nav {
-            background-color: #2563eb;
-            text-align: center;
-            padding: 12px;
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1769aa;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 10px;
+            color: #333;
+            margin-left: 18px;
             font-size: 15px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #1769aa;
         }
 
-        /* Welcome Section */
 
-        .welcome {
-            background-color: #dbeafe;
+        /* =========================
+           TOP BANNER
+        ========================= */
+
+        .top-banner {
+            background: linear-gradient(
+                120deg,
+                #1769aa,
+                #4facfe,
+                #00c6ff
+            );
+
+            color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 12px;
+            font-weight: bold;
         }
 
-        .welcome h2 {
-            color: #1d4ed8;
-            font-size: 32px;
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 480px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 60, 120, 0.55),
+                    rgba(0, 130, 200, 0.35)
+                ),
+                url("IPO.jpeg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
         }
 
-        .welcome p {
-            font-size: 17px;
+        .hero-content {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 35px;
+            border-radius: 18px;
+            max-width: 650px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            color: #1769aa;
+            font-size: 45px;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
         }
 
         .shop-button {
             display: inline-block;
-            background-color: #2563eb;
+            margin-top: 15px;
+            padding: 13px 28px;
+            background: #1769aa;
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 25px;
         }
 
-        /* Sections */
+        .shop-button:hover {
+            background: #0d4f83;
+        }
+
+
+        /* =========================
+           VIDEO STYLE AREA
+        ========================= */
+
+        .video-section {
+            text-align: center;
+            padding: 45px 20px;
+            background: white;
+        }
+
+        .video-box {
+            max-width: 800px;
+            margin: auto;
+            background: #dff3ff;
+            border-radius: 18px;
+            padding: 15px;
+        }
+
+        .video-box video {
+            width: 100%;
+            max-height: 380px;
+            border-radius: 12px;
+            background: #c5e8fa;
+        }
+
+        .video-box p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
 
         section {
-            padding: 40px 20px;
+            padding: 55px 6%;
         }
 
-        .section-title {
+        .title {
             text-align: center;
-            color: #1d4ed8;
-            font-size: 28px;
-            margin-bottom: 30px;
+            color: #1769aa;
+            font-size: 30px;
+            margin-bottom: 35px;
         }
 
-        /* Products */
+
+        /* =========================
+           PRODUCTS
+        ========================= */
 
         .products {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .product {
-            background-color: white;
-            width: 230px;
+            background: white;
+            width: 245px;
             padding: 15px;
+            border-radius: 15px;
             text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+
+            box-shadow: 0 5px 18px #d5e2ed;
+
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
         }
 
         .product img {
             width: 100%;
-            height: 220px;
+            height: 230px;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 12px;
         }
 
         .product h3 {
             font-size: 18px;
-            margin: 15px 0 8px;
+            min-height: 42px;
         }
 
         .price {
-            color: #2563eb;
-            font-size: 20px;
+            color: #1769aa;
+            font-size: 21px;
             font-weight: bold;
-            margin: 10px;
         }
 
         .order-button {
-            background-color: #22c55e;
-            color: white;
             border: none;
-            padding: 10px 18px;
-            border-radius: 5px;
+            background: #20bf55;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 14px;
+            font-weight: bold;
         }
 
         .order-button:hover {
-            background-color: #16a34a;
+            background: #159642;
         }
 
-        /* Why Us */
 
-        .why-us {
-            background-color: #eaf2ff;
+        /* =========================
+           ABOUT / FEATURES
+        ========================= */
+
+        .features {
+            background: #dff2ff;
             text-align: center;
         }
 
-        .why-box {
+        .feature-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
 
-        .why-item {
-            background-color: white;
-            width: 200px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+        .feature {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #cbdce9;
         }
 
-        .why-item h3 {
-            color: #2563eb;
+        .feature h3 {
+            color: #1769aa;
         }
 
-        /* Reviews */
+
+        /* =========================
+           REVIEWS
+        ========================= */
 
         .reviews {
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
         }
 
         .review-form {
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #d5e2ed;
         }
 
         .review-form input,
         .review-form textarea {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
+            padding: 12px;
+            margin-bottom: 12px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
+            border-radius: 8px;
+            font-size: 15px;
         }
 
         .review-form button {
-            background-color: #2563eb;
+            background: #1769aa;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 20px;
             cursor: pointer;
         }
 
         .review {
-            background-color: white;
-            padding: 15px;
+            background: white;
             margin-top: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #d5e2ed;
         }
 
         .review strong {
-            color: #2563eb;
+            color: #1769aa;
         }
 
-        /* Contact */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
-            background-color: #ffffff;
+            background: white;
             text-align: center;
         }
 
-        .whatsapp-number {
-            color: #16a34a;
+        .number {
+            color: #20a84b;
+            font-size: 20px;
             font-weight: bold;
-            font-size: 18px;
+            margin: 8px;
         }
 
-        /* Footer */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background-color: #2563eb;
+            background: #1769aa;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 30px 20px;
         }
 
-        /* Mobile */
+        footer h2 {
+            margin-top: 0;
+        }
 
-        @media (max-width: 600px) {
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            width: 58px;
+            height: 58px;
+
+            background: #20bf55;
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+
+            font-size: 27px;
+
+            box-shadow: 0 4px 15px #999;
+
+            z-index: 200;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                text-align: center;
+            }
 
             nav a {
                 display: inline-block;
                 margin: 5px;
             }
 
-            .product {
-                width: 90%;
-                max-width: 300px;
+            .hero h1 {
+                font-size: 35px;
             }
 
-            .welcome h2 {
-                font-size: 27px;
+            .hero-content {
+                padding: 25px;
+            }
+
+            .product {
+                width: 90%;
+                max-width: 320px;
             }
 
         }
@@ -271,629 +432,81 @@
 <body>
 
 
-    <!-- Header -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header>
 
-        <h1>MF COLLECTION</h1>
+        <div class="logo">
+            MF COLLECTION
+        </div>
 
-        <p>Fashion, Jewellery & Accessories</p>
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#accessories">Accessories</a>
+
+            <a href="#fashion">Fashion</a>
+
+            <a href="#jewellery">Jewellery</a>
+
+            <a href="#reviews">Reviews</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
 
     </header>
 
 
-    <!-- Navigation -->
+    <!-- TOP OFFER -->
 
-    <nav>
+    <div class="top-banner">
 
-        <a href="#home">Home</a>
+        ✨ Welcome to MF COLLECTION — Shop Our Latest Collection ✨
 
-        <a href="#accessories">Accessories</a>
-
-        <a href="#fashion">Fashion</a>
-
-        <a href="#jewellery">Jewellery</a>
-
-        <a href="#reviews">Reviews</a>
-
-        <a href="#contact">Contact</a>
-
-    </nav>
+    </div>
 
 
-    <!-- Welcome -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
-    <section class="welcome" id="home">
+    <section class="hero" id="home">
 
-        <h2>Welcome to MF COLLECTION</h2>
+        <div class="hero-content">
 
-        <p>
-            Find Fashion, Jewellery and Accessories
-            at reasonable prices.
-        </p>
+            <h1>MF COLLECTION</h1>
 
-        <a href="#fashion" class="shop-button">
-            Shop Now
-        </a>
+            <p>
+                Fashion, Jewellery & Accessories
+            </p>
 
-    </section>
+            <p>
+                Simple shopping. Easy WhatsApp ordering.
+            </p>
 
-
-    <!-- Accessories -->
-
-    <section id="accessories">
-
-        <h2 class="section-title">
-            Accessories
-        </h2>
-
-        <div class="products">
-
-
-            <!-- Trimmer -->
-
-            <div class="product">
-
-                <img src="bot.jpeg" alt="Rechargeable Hair Trimmer">
-
-                <h3>
-                    Rechargeable Hair Trimmer
-                </h3>
-
-                <p class="price">
-                    Rs. 1,500
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Rechargeable Hair Trimmer', '1500')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Earbud Covers -->
-
-            <div class="product">
-
-                <img src="air.jpeg" alt="Earbud Safety Covers">
-
-                <h3>
-                    Earbud Safety Covers
-                </h3>
-
-                <p class="price">
-                    Rs. 600
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Earbud Safety Covers', '600')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Black Head Remover -->
-
-            <div class="product">
-
-                <img src="bhr.jpeg" alt="Black Head Remover">
-
-                <h3>
-                    Black Head Remover
-                </h3>
-
-                <p class="price">
-                    Rs. 1,100
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Black Head Remover', '1100')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Tracksuit -->
-
-            <div class="product">
-
-                <img src="ts.jpeg" alt="Fabrik Tracksuit">
-
-                <h3>
-                    Fabrik Tracksuit
-                </h3>
-
-                <p class="price">
-                    Rs. 2,500
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Fabrik Tracksuit', '2500')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
+            <a href="#fashion" class="shop-button">
+                Shop Now
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- Fashion -->
+    <!-- =========================
+         VIDEO AREA
+    ========================= -->
 
-    <section id="fashion">
+    <section class="video-section">
 
-        <h2 class="section-title">
-            Fashion Collection
+        <h2 class="title">
+            🎥 Featured Collection
         </h2>
 
-        <div class="products">
+        <div class="video-box">
 
-
-            <div class="product">
-
-                <img
-                    src="IPO.jpeg"
-                    alt="Classic Pink T-Shirt and Black Trouser">
-
-                <h3>
-                    Classic Pink T-Shirt and Black Trouser
-                </h3>
-
-                <p class="price">
-                    Rs. 2,000
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Classic Pink T-Shirt and Black Trouser', '2000')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- Jewellery -->
-
-    <section id="jewellery">
-
-        <h2 class="section-title">
-            Jewellery Collection
-        </h2>
-
-        <div class="products">
-
-
-            <!-- Silver Bracelet -->
-
-            <div class="product">
-
-                <img src="sil.jpeg" alt="Silver Bracelet">
-
-                <h3>
-                    Silver Bracelet
-                </h3>
-
-                <p class="price">
-                    Rs. 1,000
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Silver Bracelet', '1000')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Luxury Locket -->
-
-            <div class="product">
-
-                <img src="loc.jpeg" alt="Luxury Locket">
-
-                <h3>
-                    Luxury Locket
-                </h3>
-
-                <p class="price">
-                    Rs. 700
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Luxury Locket', '700')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Beautiful Bracelet -->
-
-            <div class="product">
-
-                <img src="gol.jpeg" alt="Beautiful Bracelet">
-
-                <h3>
-                    Beautiful Bracelet
-                </h3>
-
-                <p class="price">
-                    Rs. 1,000
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Beautiful Bracelet', '1000')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-            <!-- Luxury Rings -->
-
-            <div class="product">
-
-                <img src="rin.jpeg" alt="Luxury Rings">
-
-                <h3>
-                    Luxury Rings
-                </h3>
-
-                <p class="price">
-                    Rs. 750
-                </p>
-
-                <button
-                    class="order-button"
-                    onclick="order('Luxury Rings', '750')">
-
-                    Order on WhatsApp
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- Why Choose Us -->
-
-    <section class="why-us">
-
-        <h2 class="section-title">
-            Why Choose MF COLLECTION?
-        </h2>
-
-        <div class="why-box">
-
-            <div class="why-item">
-
-                <h3>🚚 Delivery</h3>
-
-                <p>
-                    Delivery available.
-                </p>
-
-            </div>
-
-
-            <div class="why-item">
-
-                <h3>💵 COD</h3>
-
-                <p>
-                    Cash on Delivery available.
-                </p>
-
-            </div>
-
-
-            <div class="why-item">
-
-                <h3>📱 Easy Order</h3>
-
-                <p>
-                    Order easily through WhatsApp.
-                </p>
-
-            </div>
-
-
-            <div class="why-item">
-
-                <h3>⭐ Quality</h3>
-
-                <p>
-                    Quality products at reasonable prices.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Reviews -->
-
-    <section id="reviews">
-
-        <h2 class="section-title">
-            Customer Reviews
-        </h2>
-
-        <div class="reviews">
-
-            <div class="review-form">
-
-                <input
-                    type="text"
-                    id="reviewName"
-                    placeholder="Your Name">
-
-                <textarea
-                    id="reviewText"
-                    rows="4"
-                    placeholder="Write your review">
-                </textarea>
-
-                <button onclick="addReview()">
-                    Submit Review
-                </button>
-
-            </div>
-
-            <div id="reviewList"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-
-    <section class="contact" id="contact">
-
-        <h2 class="section-title">
-            Contact Us
-        </h2>
-
-        <p>
-            WhatsApp Order Numbers:
-        </p>
-
-        <p class="whatsapp-number">
-            03202063712
-        </p>
-
-        <p class="whatsapp-number">
-            03370362338
-        </p>
-
-        <p>
-            You can contact us on either WhatsApp number.
-        </p>
-
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer>
-
-        <h2>MF COLLECTION</h2>
-
-        <p>
-            Fashion | Jewellery | Accessories
-        </p>
-
-        <p>
-            © 2026 MF COLLECTION
-        </p>
-
-    </footer>
-
-
-    <!-- JavaScript -->
-
-    <script>
-
-
-        /* WhatsApp Order */
-
-        function order(product, price) {
-
-            var message =
-                "Assalam-o-Alaikum MF COLLECTION,%0A%0A" +
-                "I want to order:%0A" +
-                product + "%0A" +
-                "Price: Rs. " + price + "%0A%0A" +
-                "Please confirm my order. Thank you!";
-
-
-            /* Pehla WhatsApp Number */
-
-            var number1 = "923202063712";
-
-
-            /* Dusra WhatsApp Number */
-
-            var number2 = "923370362338";
-
-
-            /* User ko number choose karne dena */
-
-            var choose = confirm(
-                "OK = WhatsApp 1 (03202063712)%0A" +
-                "Cancel = WhatsApp 2 (03370362338)"
-            );
-
-
-            if (choose) {
-
-                window.open(
-                    "https://wa.me/" +
-                    number1 +
-                    "?text=" +
-                    message,
-                    "_blank"
-                );
-
-            } else {
-
-                window.open(
-                    "https://wa.me/" +
-                    number2 +
-                    "?text=" +
-                    message,
-                    "_blank"
-                );
-
-            }
-
-        }
-
-
-        /* Reviews */
-
-        function addReview() {
-
-            var name =
-                document.getElementById("reviewName").value;
-
-            var review =
-                document.getElementById("reviewText").value;
-
-
-            if (name == "" || review == "") {
-
-                alert("Please enter your name and review.");
-
-                return;
-
-            }
-
-
-            var reviews =
-                JSON.parse(
-                    localStorage.getItem("mfReviews")
-                ) || [];
-
-
-            reviews.push({
-
-                name: name,
-
-                review: review
-
-            });
-
-
-            localStorage.setItem(
-                "mfReviews",
-                JSON.stringify(reviews)
-            );
-
-
-            document.getElementById(
-                "reviewName"
-            ).value = "";
-
-
-            document.getElementById(
-                "reviewText"
-            ).value = "";
-
-
-            showReviews();
-
-        }
-
-
-        /* Show Reviews */
-
-        function showReviews() {
-
-            var reviews =
-                JSON.parse(
-                    localStorage.getItem("mfReviews")
-                ) || [];
-
-
-            var list =
-                document.getElementById("reviewList");
-
-
-            list.innerHTML = "";
-
-
-            for (
-                var i = 0;
-                i < reviews.length;
-                i++
-            ) {
-
-                list.innerHTML +=
-
-                    "<div class='review'>" +
-
-                    "<strong>⭐ " +
-                    reviews[i].name +
-                    "</strong>" +
-
-                    "<p>" +
-                    reviews[i].review +
-                    "</p>" +
-
-                    "</div>";
-
-            }
-
-        }
-
-
-        showReviews();
-
-
-    </script>
-
-
-</body>
-
-</html>
+            
